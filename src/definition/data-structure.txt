@@ -1,36 +1,192 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-Ans :
+    A. Why do we need a data structure? Data structures are essential for the efficient managing, storing, organizing
+    and using large (and potentially increasing) amounts of information.
+
 
 What are the various operations that can be performed on different Data Structures?
+    A. Linear type and Non Linear type:
+Ex: Creation, Insertion, Traversal, Search, Sorting,Merging, Update and Deletion.
+
+
 List out the areas in which data structures are applied extensively?
+    A. Compilar Design, Operation System, Database Management System, Statistical package,
+    Numerical Analysis, Grapics and Artificial Intelligence.
+
+
 what is an Array?
+    A.An array is a systematic arrangement of similar objects, usually in rows and columns.
+
+
 what is the difference between the Array and ArrayList?
+   A. Array stores data of the same type whereas ArrayList stores data in the form of the object which may be of different types.
+   Size of an ArrayList grows dynamically while Array size remains static throughout the program.
+   Insertion and deletion operation in ArrayList is slower than an Array.
+
+
 what is LinkedList?
+    A. Linked List is a part of the Collection framework present in java.util package. This class is an
+    implementation of the LinkedList data structure which is a linear data structure where the elements are not stored in
+    contiguous locations and every element is a separate object with a data part and address part. The elements are linked
+    using pointers and addresses.
+
+
 How is an Array different from Linked List?
+    A. The major difference between Array and Linked list regards to their structure.
+    Arrays are index based data structure where each element associated with an index.
+    On the other hand, Linked list relies on references where each node consists of the data and the references to the
+    previous and next element.
+    An array is a set of similar data objects stored in sequential memory
+    locations under a common heading or a variable name.
+    Array has a fixed size and required to be declared prior, but Linked List is not restricted to size and expand
+    and contract during execution.
+
+
 what is queue?
+    A. Queue is a linear data structure where the first element is inserted from one end called REAR and deleted from the
+    other end called as FRONT.
+
+
 what is stack?
+    A.a stack is an abstract data type that serves as a collection of elements, with two main principal operations: push,
+    which adds an element to the collection, and pop, which removes the most recently added element that was not yet removed.
+
+
 what is FIFO and LIFO?
+    A. FIFO= First in First out.
+    LIFO= Last in First out
+
+
 what is the order of complexity?
+    A. Order complexity is a term for special trade orders that involve one or more legs and intend to minimize losses
+    and ensure profits.
+
+
 what is the best case to search an element from an array?
+    A.  Best case is the function which performs the minimum number of steps on input data of n elements.
+
+
 what is the worst case to search an element from an array?
+    A. Worst case is the function which performs the maximum number of steps on input data of size n.
+
+
 what is tree in data structure?
+    A. A Tree is a widely used data structure that simulates a hierarchical tree structure, with a root value
+    and subtrees of children with a parent node. A tree data structure can be defined recursively as a collection of nodes,
+    where each node is a data structure consisting of a value, together with a list of references to nodes, with the
+    constraints that no reference is duplicated, and none points to the root node.
+
+
 what is graph in data structure?
+    A. A graph is a pictorial representation of a set of objects
+    where some pairs of objects are connected by links.
+
+
 what is the difference between the HashTable and HashMap?
+    Hashtable is synchronized whereas HashMap is not.
+    Another difference is that iterator in the HashMap is fail-safe while the enumerator for the Hashtable isn't.
+    if you change the map while iterating, you'll know.
+    HashMap permits null values in it, while Hashtable doesn't.
+
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+    RDBMS=Array of structures is used majorly in RDBMS.
+    NetWork data model= Graph
+    Hierarchical data model= Trees
+
+
 How HashMap works in java?
+    it gets the hash code of the key object, which is passed, and finds the bucket location. If the correct bucket is
+    found, it returns the value. If no match is found, it returns null.
+
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+    IndexOutOfBoundsException is runtime exception which occurs at during java execution in java virtual machine.
+
+
 What are the different ways of copying an array into another array?
+    There are mainly four different ways to copy all elements of one array into another array in Java.
+        1. Manually
+        2. Arrays.copyOf()
+        3. System.arraycopy()
+        4. Object.clone().
+
+
 What is difference between an array and a linked list?
+    The major difference between Array and Linked list regards to their structure.
+    Arrays are index based data structure where each element associated with an index.
+    On the other hand, Linked list relies on references where each node consists of the data and the references to the
+    previous and next element.
+    An array is a set of similar data objects stored in sequential memory
+    locations under a common heading or a variable name.
+    Array has a fixed size and required to be declared prior, but Linked List is not restricted to size and expand
+    and contract during execution.
+
+
 What is DFS and BFS?
+    BFS and DFS are two search methods to find an element in a graph.
+    BFS proceeds level after level while
+    DFS follows a path from the starting to the end node and then moves to the other path from start to end
+    and so on until visiting all the nodes.
+
+
 What is Recursion?
+    Recursion is a technique in java that a method  calls on itself continuously.
+
+
 What are linear and non linear data Structures?
+    The linear data structure is a single level data structure while
+    non-linear data structures are the multilevel data structure.
+
+
 What is Big-(O)-notation?
+    Big-O Notation is a symbol or we can say it is a symbolic notation which says that how your algorithm is
+    performed if the input data changes. mostly when the input data increases.
+
+
 Outlined different kind of sorting algorithm with time complexity?
+    Insertion sort: Insertion is the most basic sorting algorithm which works quickly on small and sorted lists.
+    It takes elements one by one from the list and inserts them in the correct order in the new sorted list. Shell sort is
+    another type of insertion sort which is more useful for larger lists
+
+
+    Selection sort: Selection sort is another comparison sort algorithm that compares a single element with all the other
+    elements from the list. It is not efficient on large lists and is used as a part of complicated algorithms. It is
+    similar to insertion sort but uses fewer swaps. So, it is useful for those programs where swaps are expensive.
+
+
+    Bubble Sort:Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly
+    steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through
+    the list is repeated until the list is sorted.
+
+
+    Merge sort:Merge Sort is a Divide and Conquer algorithm. It divides input array in two halves, calls itself
+    for the two halves and then merges the two sorted halves. The merge () function is used for merging two halves.
+
+
+    Heapsort: Heap sort is a comparison based sorting technique based on Binary Heap data structure. It is similar
+    to selection sort where we first find the maximum element and place the maximum element at the end. We repeat
+    the same process for the remaining elements.
+
+
+    Quicksort: Quicksort is a popular sorting algorithm that is often faster in practice compared to other sorting
+    algorithms. It utilizes a divide-and-conquer strategy to quickly sort data items by dividing a large array into two
+    smaller arrays.
+
+
+    Bucketsort: Bucket sort is a sorting algorithm that works by distributing the elements
+    of an array into a number of buckets.
+
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
-  a)In terms of Accessing element.
-  b)In terms of Inserting element.
-  c)In terms of Searching element.
-  d)In terms of Removing element.
+    a)In terms of Accessing element.= Time complexity analysis Using the index value,
+    we can access the array elements in constant time.
+
+    b)In terms of Inserting element.= The time complexity to insert into a doubly linked list is O(1)
+    if we know the index we need to insert at. If we do not, we have to iterate over all elements until we
+    find the one we want.
+
+    c)In terms of Searching element.= Insert(x): Inserts an item x to the data structure if not already present.
+
+    d)In terms of Removing element.= Remove(x): Removes an item x from the data structure if present.
