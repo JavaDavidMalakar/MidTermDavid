@@ -60,8 +60,11 @@ public class CsvReader {
                 System.out.print("You are in a bad shape !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
+
+
         }
-
     }
-
 }
+
+
+

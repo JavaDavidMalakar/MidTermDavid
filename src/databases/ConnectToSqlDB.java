@@ -47,7 +47,7 @@ public class ConnectToSqlDB {
         User user = null;
         try {
             Connection conn = connectToSqlDatabase();
-            String query = "SELECT * FROM Students";
+            String query = "SELECT * FROM students";
             // create the java statement
             Statement st = conn.createStatement();
             // execute the query, and get a java resultset
@@ -77,13 +77,13 @@ public class ConnectToSqlDB {
         }
     }
 
-    public List<String> readDataBase(String tableName, String columnName) throws Exception {
+    public List<String> readDataBase(String employee_record, String tableName, String columnName) throws Exception {
         List<String> data = new ArrayList<String>();
 
         try {
             connectToSqlDatabase();
             statement = connect.createStatement();
-            resultSet = statement.executeQuery("select * from " + tableName);
+            resultSet = statement.executeQuery("select * from" + tableName);
             data = getResultSetData(resultSet, columnName);
         } catch (ClassNotFoundException e) {
             throw e;
@@ -124,7 +124,7 @@ public class ConnectToSqlDB {
             ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
             ps.executeUpdate();
             ps = connect.prepareStatement(
-                    "CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`SortingNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+                    "students`" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`SortingNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
             ps.executeUpdate();
             for (int n = 0; n < ArrayData.length; n++) {
                 ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
@@ -198,7 +198,8 @@ public class ConnectToSqlDB {
     public void insertProfileToSqlTable(String tableName, String columnName1, String columnName2) {
         try {
             connectToSqlDatabase();
-            ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
             ps.setString(1, "Ankita Sing");
             ps.setInt(2, 3590);
             ps.executeUpdate();
@@ -210,5 +211,12 @@ public class ConnectToSqlDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        }
+
+    public void InsertDataFromArrayListToMySql(List<String> list1, String employee_id, String employee_info) {
+    }
+
+    public void createTableFromStringToMySql(String employee_record, String employee_id, String employee_info) {
     }
 }
+

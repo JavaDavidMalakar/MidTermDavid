@@ -20,7 +20,7 @@ public class LowestNumber {
         List<String> lowestValue = new ArrayList<String>();
         try {
             connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_lowestNumber", "column_lowestNumber");
-            lowestValue = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+            lowestValue = connectToSqlDB.readDataBase("employee_record", "tbl_lowestNumber", "column_lowestNumber");
 
         } catch (Exception e) {
             e.printStackTrace();
