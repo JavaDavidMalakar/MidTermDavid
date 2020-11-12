@@ -1,5 +1,5 @@
 package datastructure;
-
+// done but system could't find the file"src\data\self-driving-car.txt"
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
-import java.io.FileNotFoundException;
 
 public class DataReader {
 

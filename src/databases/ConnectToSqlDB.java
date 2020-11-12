@@ -1,3 +1,5 @@
+
+//done
 package databases;
 
 import java.io.FileInputStream;
@@ -42,7 +44,7 @@ public class ConnectToSqlDB {
         return connect;
     }
 
-    public static List<User> readUserProfileFromSqlTable(){
+    public static List<User> readUserProfileFromSqlTable() {
         List<User> list = new ArrayList<>();
         User user = null;
         try {
@@ -198,7 +200,7 @@ public class ConnectToSqlDB {
     public void insertProfileToSqlTable(String tableName, String columnName1, String columnName2) {
         try {
             connectToSqlDatabase();
-            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
             ps.executeUpdate();
             ps.setString(1, "Ankita Sing");
             ps.setInt(2, 3590);
@@ -211,12 +213,23 @@ public class ConnectToSqlDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        }
+    }
 
     public void InsertDataFromArrayListToMySql(List<String> list1, String employee_id, String employee_info) {
     }
 
     public void createTableFromStringToMySql(String employee_record, String employee_id, String employee_info) {
     }
+
+    public void insertIntoSqlDB(List<Student> seleniumStudents, String qtp) {
+    }
 }
+
+
+
+    
+
+
+
+
 

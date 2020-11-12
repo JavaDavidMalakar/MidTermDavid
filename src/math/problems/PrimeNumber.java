@@ -1,4 +1,7 @@
+// done
 package math.problems;
+
+import java.util.Scanner;
 
 public class PrimeNumber {
 
@@ -12,7 +15,28 @@ public class PrimeNumber {
          * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
          *
          */
+        primeMethod();
 
     }
 
+    private static void primeMethod() {
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Input a number to know if it's a prime or not!!");
+        int num = userInput.nextInt();
+        System.out.print("You entered " + num + " which is");
+        int count = 0;
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                count++;
+                break;
+            }
+        }
+        if (count == 0) {
+            System.out.println(" a prime number");
+        } else {
+            System.out.println(" not a prime number");
+
+        }
+
+    }
 }

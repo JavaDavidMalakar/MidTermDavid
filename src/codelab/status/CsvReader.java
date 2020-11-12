@@ -1,5 +1,5 @@
 package codelab.status;
-
+// done
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -40,31 +40,49 @@ public class CsvReader {
             e.printStackTrace();
         }
         Collections.sort(roster);
+        int numOfEx = 0;
         for (Trainee student : roster) {
             if (student.getNumberOfExercisesSolved() >= 500) {
                 System.out.print("You did pretty good-->                    ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                numOfEx= numOfEx+student.getNumberOfExercisesSolved();
+
             } else if (student.getNumberOfExercisesSolved() >= 400 && student.getNumberOfExercisesSolved() < 500) {
                 System.out.print("You could do better-->                    ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                numOfEx= numOfEx+student.getNumberOfExercisesSolved();
+
             } else if (student.getNumberOfExercisesSolved() >= 300 && student.getNumberOfExercisesSolved() < 400) {
                 System.out.print("You should have done more-->              ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                numOfEx= numOfEx+student.getNumberOfExercisesSolved();
+
             } else if (student.getNumberOfExercisesSolved() >= 200 && student.getNumberOfExercisesSolved() < 300) {
                 System.out.print("You haven't done enough-->                 ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                numOfEx= numOfEx+student.getNumberOfExercisesSolved();
+
             } else if (student.getNumberOfExercisesSolved() >= 100 && student.getNumberOfExercisesSolved() < 200) {
                 System.out.print("You did not take this exercise seriously-->   ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                numOfEx= numOfEx+student.getNumberOfExercisesSolved();
+
             } else if (student.getNumberOfExercisesSolved() < 100) {
                 System.out.print("You are in a bad shape !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
+                numOfEx= numOfEx+student.getNumberOfExercisesSolved();
+
             }
 
 
         }
+        System.out.println("The total score is: "+ numOfEx);
+        int numberOfStudent = 26;
+        double average = numOfEx/ numberOfStudent;
+        System.out.println("The average score of the class is: "+average);
     }
 }
+
 
 
 

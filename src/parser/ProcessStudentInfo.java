@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import databases.ConnectToSqlDB;
 import org.xml.sax.SAXException;
 
 
@@ -34,7 +35,6 @@ public class ProcessStudentInfo {
      * Use any databases[MongoDB, Oracle or MySql] to store data and to retrieve data.
      *
      */
-
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
         //Path of XML data to be read.
         String pathSelenium = System.getProperty("user.dir") + "/src/parser/selenium.xml";
@@ -44,7 +44,7 @@ public class ProcessStudentInfo {
 
         //Declare a Map with List<String> into it.
         Map<String, List<Student>> list = new LinkedHashMap<String, List<Student>>();
-				
+
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
 
@@ -81,3 +81,6 @@ public class ProcessStudentInfo {
     }
 
 }
+
+
+
